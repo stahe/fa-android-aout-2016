@@ -1,0 +1,1840 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مقدمه‌ای بر برنامه‌نویسی تبلت‌های اندرویدی با اندروید استودیو">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/fa-android-aout-2016/pywsth.html">
+      
+      
+        <link rel="prev" href="tp-2---khntrl-ardwynwh-b-tblt-ndrwyd.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>6. پیوست‌ها - مقدمه‌ای بر برنامه‌نویسی تبلت‌های اندرویدی با اندروید استودیو</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "مقدمه‌ای بر برنامه‌نویسی تبلت‌های اندرویدی با اندروید استودیو";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="مقدمه‌ای بر برنامه‌نویسی تبلت‌های اندرویدی با اندروید استودیو" class="md-header__button md-logo" aria-label="مقدمه‌ای بر برنامه‌نویسی تبلت‌های اندرویدی با اندروید استودیو" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مقدمه‌ای بر برنامه‌نویسی تبلت‌های اندرویدی با اندروید استودیو
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. پیوست‌ها
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="جابجایی به حالت تاریک"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="جابجایی به حالت تاریک" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="جابجایی به حالت روشن"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="جابجایی به حالت روشن" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/fa-android-aout-2016" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="مقدمه‌ای بر برنامه‌نویسی تبلت‌های اندرویدی با اندروید استودیو" class="md-nav__button md-logo" aria-label="مقدمه‌ای بر برنامه‌نویسی تبلت‌های اندرویدی با اندروید استودیو" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مقدمه‌ای بر برنامه‌نویسی تبلت‌های اندرویدی با اندروید استودیو
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/fa-android-aout-2016" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    خوش آمدید
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ydgyry-brnmhnwysy-ndrwyd.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. یادگیری برنامه‌نویسی اندروید
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="skhlt-ykh-khlynt-ndrwyd-khh-b-ykh-srwys-wb--json-rtb-brqrr-mykhnd.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. اسکلت یک کلاینت اندروید که با یک سرویس وب / jSON ارتباط برقرار می‌کند
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mlh-mwrdy---mdyryt-qrr-mlqth.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. مطالعه موردی – مدیریت قرار ملاقات‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tp-1-mdyryt-pyh-ykh-brgh-prdkht.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. TP ۱: مدیریت پایهٔ یک برگهٔ پرداخت
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tp-2---khntrl-ardwynwh-b-tblt-ndrwyd.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. TP ۲ – کنترل آردوینوها با تبلت اندروید
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. پیوست‌ها
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="pywsth.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. پیوست‌ها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. نصب آردوینو IDE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. نصب درایور آردوینو
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. آزمایش IDE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4. اتصال شبکه آردوینو
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5. آزمایش یک برنامه شبکه
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-ajson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6. کتابخانه aJson
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7. تبلت اندروید
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68-jdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.8. نصب JDK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69-genymotion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.9. نصب مدیر شبیه‌ساز Genymotion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#610-maven" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.10. نصب Maven
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#611-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.11. نصب اندروید استودیو IDE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#612" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.12. استفاده از مثال‌ها
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#613-advanced-rest-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.13. نصب افزونه کروم [Advanced Rest Client]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#614-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.14. مدیریت jSON « » در جاوا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#615-wampserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.15. نصب [WampServer]
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><span id="refheading191902103626402" name="refheading191902103626402" class="odt-bookmark-anchor"></span></p>
+<h1 id="6">6. <span style="color: #365f91">پیوست‌ها</span></h1>
+<p><span style="color: #000000"><span id="refheading472751712028290" name="refheading472751712028290" class="odt-bookmark-anchor"></span>در اینجا توضیح می‌دهیم چگونه ابزارهای مورد استفاده در این سند را بر روی سیستم‌های ویندوز ۷ تا ۱۰ نصب کنیم. خوانندگان باید دستورالعمل‌ها را متناسب با محیط خود تطبیق دهند.</span></p>
+<p><span id="refheading397078041079301" name="refheading397078041079301" class="odt-bookmark-anchor"></span>
+<span id="annexes" name="annexes" class="odt-bookmark-anchor"></span></p>
+<h2 id="61-ide">6.1. <span style="color: #4f81bd">نصب آردوینو <bdi dir="ltr" class="odt-ltr-term">IDE</bdi></span></h2>
+<p>وب‌سایت رسمی آردوینو [<bdi dir="ltr" class="odt-ltr-term">http://www.arduino.cc/</bdi>] است. در اینجا می‌توانید برد توسعه <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> برای بردهای آردوینو [<bdi dir="ltr" class="odt-ltr-term">http://arduino.cc/en/Main/Software</bdi>] را بیابید:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000D9000000C288A7FBBA.png" width="152" height="136" style="display:inline-block; margin:4px;width:4.02cm;height:3.59cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D9000000C288A7FBBA.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000B200000172FAB58CD1.png" width="125" height="259" style="display:inline-block; margin:4px;width:3.3cm;height:6.849cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B200000172FAB58CD1.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>فایل دانلود شده [1] یک فایل فشرده <bdi dir="ltr" class="odt-ltr-term">ZIP</bdi> است که پس از استخراج، ساختار دایرکتوری [2] را ایجاد می‌کند. می‌توانید <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> را با دوبار کلیک روی فایل اجرایی [3] اجرا کنید.</p>
+<p><span id="refheading33719961377870" name="refheading33719961377870" class="odt-bookmark-anchor"></span></p>
+<h2 id="62">6.2. <span style="color: #4f81bd">نصب درایور آردوینو</span></h2>
+<p>برای اینکه <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> بتواند با آردوینو ارتباط برقرار کند، آردوینو باید توسط میزبان <bdi dir="ltr" class="odt-ltr-term">PC</bdi> شناسایی شود. برای این کار، مراحل زیر را دنبال کنید:</p>
+<ul>
+  <li>آردوینو را به یک پورت <bdi dir="ltr" class="odt-ltr-term">USB</bdi> روی رایانه میزبان متصل کنید؛
+  </li>
+  <li>سپس سیستم تلاش می‌کند تا درایور دستگاه جدید <bdi dir="ltr" class="odt-ltr-term">USB</bdi> را پیدا کند. این درایور پیدا نخواهد شد. در این صورت باید مشخص کنید که درایور در دیسک، در مسیر <b>&lt;<bdi dir="ltr" class="odt-ltr-term">arduino</bdi>&gt;/<bdi dir="ltr" class="odt-ltr-term">drivers</bdi> </b>قرار دارد، که در آن &lt;<bdi dir="ltr" class="odt-ltr-term">arduino</bdi>&gt; پوشه نصب <bdi dir="ltr" class="odt-ltr-term">Arduino IDE</bdi> است. 
+  </li>
+</ul>
+
+<p><span id="refheading33721961377870" name="refheading33721961377870" class="odt-bookmark-anchor"></span></p>
+<h2 id="63-ide">6.3. <span style="color: #4f81bd">آزمایش <bdi dir="ltr" class="odt-ltr-term">IDE</bdi></span></h2>
+<p>برای آزمایش <bdi dir="ltr" class="odt-ltr-term">IDE</bdi>، مراحل زیر را دنبال کنید:</p>
+<ul>
+  <li><bdi dir="ltr" class="odt-ltr-term">IDE</bdi> را راه‌اندازی کنید؛
+  </li>
+  <li>آردوینو را با استفاده از کابل <bdi dir="ltr" class="odt-ltr-term">USB</bdi> آن به <bdi dir="ltr" class="odt-ltr-term">PC</bdi> متصل کنید. در حال حاضر، کارت شبکه را نصب نکنید؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000025F000000C2762AEE05.png" width="395" height="126" style="display:inline-block; margin:4px;width:10.44cm;height:3.341cm;" class="odt-zoomable" data-zoom-src="images/100000000000025F000000C2762AEE05.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000018D000000663E265D33.png" width="258" height="66" style="display:inline-block; margin:4px;width:6.83cm;height:1.75cm;" class="odt-zoomable" data-zoom-src="images/100000000000018D000000663E265D33.png" /></td></tr></table>
+
+<ul>
+  <li>در [1]، نوع برد آردوینو متصل به پورت <bdi dir="ltr" class="odt-ltr-term">USB</bdi> را انتخاب کنید؛
+  </li>
+  <li>در [2]، پورت <bdi dir="ltr" class="odt-ltr-term">USB</bdi> را که آردوینو به آن متصل است مشخص کنید. برای این کار، آردوینو را جدا کرده و پورت‌ها را یادداشت کنید. آن را دوباره وصل کرده و پورت‌ها را مجدداً بررسی کنید: پورت اضافه شده، پورت آردوینو است؛
+  </li>
+</ul>
+
+<p>برخی از مثال‌های موجود در <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> را اجرا کنید:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000263000000C949BE4591.png" width="397" height="131" style="display:inline-block; margin:4px;width:10.509cm;height:3.461cm;" class="odt-zoomable" data-zoom-src="images/1000000000000263000000C949BE4591.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>مثال بارگذاری و نمایش داده می‌شود:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000217000001FA96EABE38.png" width="375" height="354" style="display:inline-block; margin:4px;width:9.91cm;height:9.37cm;" class="odt-zoomable" data-zoom-src="images/1000000000000217000001FA96EABE38.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>مثال‌های همراه با <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> بسیار آموزنده و با توضیحات مناسب هستند. کد آردوینو به زبان <bdi dir="ltr" class="odt-ltr-term">C</bdi> نوشته شده و از دو بخش مجزا تشکیل شده است:</p>
+<ul>
+  <li>یک تابع [<bdi dir="ltr" class="odt-ltr-term">setup</bdi>] که یک‌بار هنگام شروع برنامه اجرا می‌شود، چه زمانی که «بارگذاری شده باشد &quot; از میزبان <bdi dir="ltr" class="odt-ltr-term">PC</bdi> به آردوینو، یا زمانی که برنامه از قبل روی آردوینو موجود است و دکمه [<bdi dir="ltr" class="odt-ltr-term">Reset</bdi>] فشرده می‌شود. اینجاست که کد راه‌اندازی برنامه قرار می‌گیرد؛
+  </li>
+  <li>یک تابع [<bdi dir="ltr" class="odt-ltr-term">loop</bdi>] که به‌طور مداوم اجرا می‌شود (حلقه بی‌نهایت). اینجاست که هستهٔ برنامه قرار می‌گیرد.
+  </li>
+</ul>
+
+<p>در اینجا،</p>
+<ul>
+  <li>تابع [<bdi dir="ltr" class="odt-ltr-term">setup</bdi>] پین ۱۳ را به عنوان خروجی پیکربندی می‌کند؛
+  </li>
+  <li>تابع [<bdi dir="ltr" class="odt-ltr-term">loop</bdi>] آن را به طور مکرر روشن و خاموش می‌کند: <bdi dir="ltr" class="odt-ltr-term">LED</bdi> هر ثانیه چشمک می‌زند.
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">1</div><img src="images/10000000000000DB0000008DABE29F35.png" width="153" height="99" style="display:inline-block; margin:4px;width:4.06cm;height:2.611cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DB0000008DABE29F35.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>برنامه نمایش داده شده با استفاده از دکمه [1] به آردوینو منتقل (اپلود) می‌شود. پس از انتقال، برنامه اجرا شده و <bdi dir="ltr" class="odt-ltr-term">LED</bdi> شماره ۱۳ به طور نامحدود شروع به چشمک زدن می‌کند.</p>
+<p><span id="refheading33723961377870" name="refheading33723961377870" class="odt-bookmark-anchor"></span></p>
+<h2 id="64">6.4. <span style="color: #4f81bd">اتصال شبکه آردوینو</span></h2>
+<p>آردوینو(ها) و میزبان <bdi dir="ltr" class="odt-ltr-term">PC</bdi> باید در یک شبکه خصوصی باشند:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003A5000001079D693529.png" width="467" height="132" style="display:inline-block; margin:4px;width:12.344cm;height:3.48cm;" class="odt-zoomable" data-zoom-src="images/10000000000003A5000001079D693529.png" /></td></tr></table>
+
+<p>اگر تنها یک آردوینو وجود داشته باشد، می‌توان آن را با استفاده از یک کابل ساده <bdi dir="ltr" class="odt-ltr-term">RJ</bdi> 45 به میزبان <bdi dir="ltr" class="odt-ltr-term">PC</bdi> متصل کرد. اگر بیش از یک عدد باشد، میزبان <bdi dir="ltr" class="odt-ltr-term">PC</bdi> و آردوینوها از طریق یک مینی-هاب به همان شبکه متصل خواهند شد.</p>
+<p>میزبان <bdi dir="ltr" class="odt-ltr-term">PC</bdi> و آردوینوها روی شبکه خصوصی <strong><bdi dir="ltr" class="odt-ltr-term">192.168.2.x</bdi></strong> قرار خواهند گرفت.</p>
+<ul>
+  <li>آدرس <bdi dir="ltr" class="odt-ltr-term">IP</bdi> برای آردوینوها توسط کد منبع تنظیم می‌شود. خواهیم دید چگونه؛
+  </li>
+  <li>آدرس کامپیوتر میزبان (<bdi dir="ltr" class="odt-ltr-term">IP</bdi>) را می‌توان به صورت زیر تنظیم کرد:
+  </li>
+</ul>
+
+<ul>
+  <li>گزینه [<bdi dir="ltr" class="odt-ltr-term">Panneau de configuration</bdi>\<bdi dir="ltr" class="odt-ltr-term">Réseau et Internet</bdi>\<bdi dir="ltr" class="odt-ltr-term">Centre Réseau et partage</bdi>] را انتخاب کنید:
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002CB0000018F68EC5235.png" width="500" height="279" style="display:inline-block; margin:4px;width:13.24cm;height:7.391cm;" class="odt-zoomable" data-zoom-src="images/10000000000002CB0000018F68EC5235.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>به [1]، لینک [<bdi dir="ltr" class="odt-ltr-term">Connexion au réseau local</bdi>] را دنبال کنید
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000179000001C79DD9B237.png" width="264" height="319" style="display:inline-block; margin:4px;width:6.98cm;height:8.43cm;" class="odt-zoomable" data-zoom-src="images/1000000000000179000001C79DD9B237.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001BD00000173CD5E97D9.png" width="311" height="260" style="display:inline-block; margin:4px;width:8.241cm;height:6.87cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BD00000173CD5E97D9.png" /></td></tr></table>
+
+<ul>
+  <li>برای [2]، ویژگی‌های اتصال را مشاهده کنید؛
+  </li>
+  <li>در [4]، ویژگی‌های اتصال را مشاهده کنید <bdi dir="ltr" class="odt-ltr-term">IP v4</bdi> [3];
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000197000001C87B84023F.png" width="285" height="319" style="display:inline-block; margin:4px;width:7.541cm;height:8.451cm;" class="odt-zoomable" data-zoom-src="images/1000000000000197000001C87B84023F.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در [5]، آدرس <bdi dir="ltr" class="odt-ltr-term">IP</bdi> [192.168.2.1] را به رایانه میزبان اختصاص دهید؛
+  </li>
+  <li>در [6]، ماسک زیرشبکه [255.255.255.0] را به شبکه اختصاص دهید؛
+  </li>
+  <li>همه چیز را در [7] تأیید کنید.
+  </li>
+</ul>
+
+<p><span id="refheading33725961377870" name="refheading33725961377870" class="odt-bookmark-anchor"></span></p>
+<h2 id="65">6.5. <span style="color: #4f81bd">آزمایش یک برنامه شبکه</span></h2>
+<p>با استفاده از <bdi dir="ltr" class="odt-ltr-term">IDE</bdi>، مثال [<bdi dir="ltr" class="odt-ltr-term">Exemples / Ethernet / WebServer</bdi>] را بارگذاری کنید:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<span class="odt-code-line"><span class="odt-code-line-content">/*</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  Web Server</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> A simple web server that shows the value of the analog input pins.</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> using an Arduino Wiznet Ethernet shield. </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> Circuit:</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> * Ethernet shield attached to pins 10, 11, 12, 13</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> * Analog inputs attached to pins A0 through A5 (optional)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> created 18 Dec 2009</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> by David A. Mellis</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> modified 9 Apr 2012</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> by Tom Igoe</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> */</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">#include &lt;SPI.h&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">#include &lt;Ethernet.h&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// یک آدرس MAC و یک آدرس IP برای کنترل‌کننده خود در زیر وارد کنید.</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// آدرس IP به شبکه محلی شما بستگی دارد:</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">byte</span><span style="color:#008080"> </span><span style="color:#000000">mac[]</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">{</span><span style="color:#008080"> </span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000080">0xDE</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">0xAD</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">0xBE</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">0xEF</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">0xFE</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">0xED</span><span style="color:#008080"> </span><span style="color:#000000">};</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">IPAddress</span><span style="color:#008080"> </span><span style="color:#000000">ip(</span><span style="color:#000080">192</span><span style="color:#000000">,</span><span style="color:#000080">168</span><span style="color:#000000">,</span><span style="color:#000080">1</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">177</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// کتابخانهٔ سرور اترنت را راه‌اندازی کنید</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">//با استفاده از آدرس IP و پورتی که می‌خواهید استفاده کنید </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">//(پورت ۸۰ پیش‌فرض برای HTTP است):</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">EthernetServer</span><span style="color:#008080"> </span><span style="color:#000000">server(</span><span style="color:#000080">80</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">void</span><span style="color:#008080"> </span><span style="color:#000000">setup()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// ارتباط سریال را باز کنید و منتظر باز شدن پورت باشید:</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">Serial.begin(</span><span style="color:#000080">9600</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">   </span><span style="font-weight:bold;color:#000000">while</span><span style="color:#008080"> </span><span style="color:#000000">(!Serial)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    ; //منتظر بمانید تا پورت سریال متصل شود. فقط برای لئوناردو لازم است</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// ارتباط اترنت و سرور را راه‌اندازی کنید:</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">Ethernet.begin(mac,</span><span style="color:#008080"> </span><span style="color:#000000">ip);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">server.begin();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">Serial.print(</span><span style="color:#800000">&quot;server is at &quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">Serial.println(Ethernet.localIP());</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">void</span><span style="color:#008080"> </span><span style="color:#000000">loop()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// منتظر مشتریان ورودی باشید</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">EthernetClient</span><span style="color:#008080"> </span><span style="color:#000000">client</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">server.available();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(client)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">Serial.println(</span><span style="color:#800000">&quot;new client&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">//یک درخواست HTTP با یک خط خالی پایان می‌یابد</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">boolean</span><span style="color:#008080"> </span><span style="color:#000000">currentLineIsBlank</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">true</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">while</span><span style="color:#008080"> </span><span style="color:#000000">(client.connected())</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(client.available())</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="font-weight:bold;color:#000000">char</span><span style="color:#008080"> </span><span style="color:#000000">c</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">client.read();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="color:#000000">Serial.write(c);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008080">// اگر به انتهای خط رسیدید (یک خط جدید دریافت کردید</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008080">// نقطه‌گذاری) و خط خالی است، درخواست HTTP پایان یافته است،</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#008080">// تا بتوانید پاسخ ارسال کنید</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(c</span><span style="color:#008080"> </span><span style="color:#000000">==</span><span style="color:#008080"> </span><span style="color:#000000">&#x27;\n&#x27;</span><span style="color:#008080"> </span><span style="color:#000000">&amp;&amp;</span><span style="color:#008080"> </span><span style="color:#000000">currentLineIsBlank)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008080">// یک هدر استاندارد پاسخ HTTP ارسال کنید</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;HTTP/1.1 200 OK&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;Content-Type: text/html&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;Connection: close&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="color:#000000">client.println();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;&lt;!DOCTYPE HTML&gt;&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;&lt;html&gt;&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                    <span style="color:#008080">// یک تگ meta refresh اضافه کنید، تا مرورگر هر ۵ ثانیه یک‌بار تازه شود:</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;&lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;5\&quot;&gt;&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008080">//مقدار هر پین ورودی آنالوگ را خروجی دهید</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="font-weight:bold;color:#000000">for</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="font-weight:bold;color:#000000">int</span><span style="color:#008080"> </span><span style="color:#000000">analogChannel</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#000000">analogChannel</span><span style="color:#008080"> </span><span style="color:#000000">&lt;</span><span style="color:#008080"> </span><span style="color:#000080">6</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#000000">analogChannel++)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">            </span><span style="font-weight:bold;color:#000000">int</span><span style="color:#008080"> </span><span style="color:#000000">sensorReading</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">analogRead(analogChannel);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">            </span><span style="color:#000000">client.print(</span><span style="color:#800000">&quot;analog input &quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">            </span><span style="color:#000000">client.print(analogChannel);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">            </span><span style="color:#000000">client.print(</span><span style="color:#800000">&quot; is &quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">            </span><span style="color:#000000">client.print(sensorReading);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">            </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;&lt;br /&gt;&quot;</span><span style="color:#000000">);</span><span style="color:#008080">       </span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;&lt;/html&gt;&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="font-weight:bold;color:#000000">break</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(c</span><span style="color:#008080"> </span><span style="color:#000000">==</span><span style="color:#008080"> </span><span style="color:#000000">&#x27;\n&#x27;)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008080">//شما یک خط جدید را شروع می‌کنید</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="color:#000000">currentLineIsBlank</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">true</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="color:#000000">}</span><span style="color:#008080"> </span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="font-weight:bold;color:#000000">else</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(c</span><span style="color:#008080"> </span><span style="color:#000000">!=</span><span style="color:#008080"> </span><span style="color:#000000">&#x27;\r&#x27;)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#008080">//شما یک کاراکتر را در خط جاری دریافت کرده‌اید</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">          </span><span style="color:#000000">currentLineIsBlank</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">false</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// به مرورگر وب زمان بدهید تا داده‌ها را دریافت کند</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">delay(</span><span style="color:#000080">1</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// اتصال را ببندید:</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">client.stop();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">Serial.println(</span><span style="color:#800000">&quot;client disconnected&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p>این برنامه یک سرور وب را روی پورت ۸۰ (خط ۳۰) در آدرس <bdi dir="ltr" class="odt-ltr-term">IP</bdi> در خط ۲۵ ایجاد می‌کند. آدرس <bdi dir="ltr" class="odt-ltr-term">MAC</bdi> در خط ۲۳، همان آدرسی است که برای <bdi dir="ltr" class="odt-ltr-term">MAC</bdi> روی کارت شبکه آردوینو مشخص شده است.</p>
+<p>تابع [<bdi dir="ltr" class="odt-ltr-term">setup</bdi>] وب‌سرور را راه‌اندازی می‌کند:</p>
+<ul>
+  <li>خط ۳۴: پورت سریال را که برنامه برای ارسال لاگ‌ها از آن استفاده می‌کند، راه‌اندازی می‌کند. ما این لاگ‌ها را زیر نظر خواهیم گرفت؛
+  </li>
+  <li>خط ۴۱: گره <bdi dir="ltr" class="odt-ltr-term">TCP-IP</bdi> (<bdi dir="ltr" class="odt-ltr-term">IP</bdi>، پورت) راه‌اندازی می‌شود؛
+  </li>
+  <li>خط ۴۲: سرورِ خط ۳۰ روی این گره شبکه راه‌اندازی می‌شود؛
+  </li>
+  <li>خطوط ۴۳–۴۴: آدرس وب‌سرور، <bdi dir="ltr" class="odt-ltr-term">IP</bdi>، ثبت می‌شود؛
+  </li>
+</ul>
+
+<p>تابع [<bdi dir="ltr" class="odt-ltr-term">loop</bdi>] سرور وب را پیاده‌سازی می‌کند:</p>
+<ul>
+  <li>خط ۵۰: اگر یک کلاینت به وب‌سرور متصل شود<i>، [<bdi dir="ltr" class="odt-ltr-term">server</bdi>].<bdi dir="ltr" class="odt-ltr-term">available</bdi> </i>همان کلاینت را بازمی‌گرداند؛ در غیر این صورت، <i><bdi dir="ltr" class="odt-ltr-term">null</bdi> را</i> بازمی‌گرداند؛
+  </li>
+  <li>خط ۵۱: اگر کلاینت <i><bdi dir="ltr" class="odt-ltr-term">null</bdi></i> نباشد؛
+  </li>
+  <li>خط ۵۵: تا زمانی که مشتری متصل است؛
+  </li>
+  <li>خط ۵۶: <i>[<bdi dir="ltr" class="odt-ltr-term">client</bdi>].<bdi dir="ltr" class="odt-ltr-term">available</bdi> </i>زمانی <bdi dir="ltr" class="odt-ltr-term">true</bdi> است که کلاینت هر کاراکتری ارسال کرده باشد. این کاراکترها در یک بافر ذخیره می‌شوند. <i>[<bdi dir="ltr" class="odt-ltr-term">client</bdi>].<bdi dir="ltr" class="odt-ltr-term">available</bdi> </i>تا زمانی که این بافر خالی نباشد <bdi dir="ltr" class="odt-ltr-term">true</bdi> است؛
+  </li>
+  <li>خط ۵۷: یک کاراکتر ارسال‌شده توسط کلاینت خوانده می‌شود؛
+  </li>
+  <li>خط ۵۸: این کاراکتر در کنسول لاگ بازتاب داده می‌شود؛
+  </li>
+  <li>خط ۶۲: در پروتکل <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>، کلاینت و سرور خطوط متنی را با یکدیگر مبادله می‌کنند. 
+    <ul>
+      <li>کلاینت با ارسال مجموعه‌ای از خطوط متن که با یک خط خالی پایان می‌یابد، یک درخواست <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> به وب سرور ارسال می‌کند،
+      </li>
+      <li>سپس سرور با ارسال یک پاسخ و قطع اتصال به کلاینت پاسخ می‌دهد؛
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>خط ۶۲: سرور با سربرگ‌های <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> که از کلاینت دریافت می‌کند، کاری نمی‌کند. این صرفاً منتظر خط خالی است: خطی که فقط شامل کاراکتر <strong>\n</strong> است؛</p>
+<ul>
+  <li>خطوط ۶۴–۶۷: سرور خطوط متنی استاندارد پروتکل <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> را برای کلاینت ارسال می‌کند. این خطوط با یک خط خالی (خط ۶۷) پایان می‌یابند؛
+  </li>
+  <li>از خط ۶۸ به بعد، سرور یک سند را برای کلاینت خود ارسال می‌کند. این سند به صورت پویا توسط سرور تولید شده و در قالب <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> (خطوط ۶۸–۶۹) است؛
+  </li>
+  <li>خط ۷۱: یک خط خاص <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> که به مرورگر کلاینت دستور می‌دهد هر ۵ ثانیه صفحه را تازه‌سازی کند. بنابراین مرورگر هر ۵ ثانیه همان صفحه را درخواست خواهد کرد؛
+  </li>
+  <li>خطوط ۷۳–۸۰: سرور مقادیر شش ورودی آنالوگ آردوینو را به مرورگر کلاینت ارسال می‌کند؛
+  </li>
+  <li>خط ۸۱: سند <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> بسته می‌شود؛
+  </li>
+  <li>خط ۸۲: برنامه از حلقه <i><bdi dir="ltr" class="odt-ltr-term">while</bdi> </i>در خط ۵۵ خارج می‌شود؛
+  </li>
+  <li>خط ۹۷: اتصال با کلاینت بسته می‌شود؛
+  </li>
+  <li>خط ۹۸: رویداد در کنسول لاگ ثبت می‌شود؛
+  </li>
+  <li>خط 100: ما به ابتدای تابع <b>`<bdi dir="ltr" class="odt-ltr-term">loop</bdi></b>` بازمی‌گردیم: سرور دوباره به شنود برای کلاینت‌ها ادامه خواهد داد. ما گفتیم که مرورگر کلاینت هر 5 ثانیه همان صفحه را درخواست خواهد کرد. سرور برای پاسخ دادن دوباره به آن آماده خواهد بود.
+  </li>
+</ul>
+
+<p>کد خط ۲۵ را ویرایش کنید تا آدرس <bdi dir="ltr" class="odt-ltr-term">IP</bdi> آردوینوی خود را، برای مثال، اضافه کنید:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>IPAddress ip(192,168,2,2);
+</code></pre></div>
+<p>برنامه را روی آردوینو بارگذاری کنید. کنسول لاگ (<bdi dir="ltr" class="odt-ltr-term">Ctrl-M</bdi>) (<bdi dir="ltr" class="odt-ltr-term">M</bdi> بزرگ) را باز کنید:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000CA00000075F4A99959.png" width="141" height="82" style="display:inline-block; margin:4px;width:3.739cm;height:2.17cm;" class="odt-zoomable" data-zoom-src="images/10000000000000CA00000075F4A99959.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F5000000EA1755651A.png" width="172" height="164" style="display:inline-block; margin:4px;width:4.54cm;height:4.33cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F5000000EA1755651A.png" /></td></tr></table>
+
+<ul>
+  <li>در [1]، کنسول لاگ. سرور راه‌اندازی شده است؛
+  </li>
+  <li>در [2]، با استفاده از یک مرورگر وب، آدرس آردوینو را در <bdi dir="ltr" class="odt-ltr-term">IP</bdi> درخواست کنید. در اینجا، [192.168.2.2] به طور پیش‌فرض به [<bdi dir="ltr" class="odt-ltr-term">http://198.162.2.2</bdi>:80] ترجمه می‌شود؛
+  </li>
+  <li>در [3]، اطلاعاتی که توسط وب‌سرور ارسال شده است. اگر کد منبع صفحهٔ مرورگر را مشاهده کنید، با این محتوا مواجه می‌شوید:
+  </li>
+</ul>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;refresh&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;5&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>analog input 0 is 1023<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>analog input 1 is 1023<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>analog input 2 is 727<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>analog input 3 is 543<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>analog input 4 is 395<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>analog input 5 is 310<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>در اینجا می‌توانیم خطوط متنی ارسال‌شده توسط سرور را تشخیص دهیم. در سمت آردوینو، کنسول لاگ آنچه را که کلاینت برای آن ارسال می‌کند نمایش می‌دهد:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">new</span> <span class="n">client</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">GET</span> <span class="o">/</span><span class="n">favicon</span><span class="o">.</span><span class="n">ico</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">Host</span><span class="p">:</span> <span class="mf">192.168.2.2</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">Connection</span><span class="p">:</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">Accept</span><span class="p">:</span> <span class="o">*/*</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">User</span><span class="o">-</span><span class="n">Agent</span><span class="p">:</span> <span class="n">Mozilla</span><span class="o">/</span><span class="mf">5.0</span> <span class="p">(</span><span class="n">Windows</span> <span class="n">NT</span> <span class="mf">6.2</span><span class="p">;</span> <span class="n">WOW64</span><span class="p">)</span> <span class="n">AppleWebKit</span><span class="o">/</span><span class="mf">537.22</span> <span class="p">(</span><span class="n">KHTML</span><span class="p">,</span> <span class="n">like</span> <span class="n">Gecko</span><span class="p">)</span> <span class="n">Chrome</span><span class="o">/</span><span class="mf">25.0.1364.172</span> <span class="n">Safari</span><span class="o">/</span><span class="mf">537.22</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span> <span class="n">gzip</span><span class="p">,</span><span class="n">deflate</span><span class="p">,</span><span class="n">sdch</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">fr</span><span class="o">-</span><span class="n">FR</span><span class="p">,</span><span class="n">fr</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">en</span><span class="o">-</span><span class="n">US</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">en</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.4</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Charset</span><span class="p">:</span> <span class="n">ISO</span><span class="o">-</span><span class="mi">8859</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="o">*</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.3</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">client</span> <span class="n">disconnected</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+  <li>خطوط ۲–۹: سربرگ‌های استاندارد <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>؛
+  </li>
+  <li>خط ۱۰: خط خالی که آن‌ها را خاتمه می‌دهد.
+  </li>
+</ul>
+
+<p>این مثال را با دقت مطالعه کنید. این به شما کمک می‌کند تا برنامه‌نویسی آردوینوی مورد استفاده در <bdi dir="ltr" class="odt-ltr-term">TP</bdi> را درک کنید.</p>
+<p><span id="refheading34558350318798" name="refheading34558350318798" class="odt-bookmark-anchor"></span></p>
+<h2 id="66-ajson">6.6. <span style="color: #4f81bd">کتابخانه <bdi dir="ltr" class="odt-ltr-term">aJson</bdi></span></h2>
+<p>در برنامه <bdi dir="ltr" class="odt-ltr-term">TP</bdi> که باید نوشته شود، آردوینوها خطوط متن را در قالب <bdi dir="ltr" class="odt-ltr-term">jSON</bdi> با مشتریان خود مبادله می‌کنند. به طور پیش‌فرض، آردوینو <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> شامل کتابخانه‌ای برای مدیریت <bdi dir="ltr" class="odt-ltr-term">jSON</bdi> نیست. ما کتابخانه <strong><bdi dir="ltr" class="odt-ltr-term">aJson</bdi></strong> را که در <bdi dir="ltr" class="odt-ltr-term">URL</bdi> و [<bdi dir="ltr" class="odt-ltr-term">https://github.com/interactive-matter/aJson</bdi>] موجود است، نصب خواهیم کرد.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000016E0000006F477E7917.png" width="256" height="77" style="display:inline-block; margin:4px;width:6.78cm;height:2.05cm;" class="odt-zoomable" data-zoom-src="images/100000000000016E0000006F477E7917.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000075000000678E04B25D.png" width="82" height="72" style="display:inline-block; margin:4px;width:2.17cm;height:1.91cm;" class="odt-zoomable" data-zoom-src="images/1000000000000075000000678E04B25D.png" /></td></tr></table>
+
+<ul>
+  <li>در [1]، نسخه فشرده‌شده را از مخزن گیت‌هاب دانلود کنید؛
+  </li>
+  <li>فایل فشرده را از حالت فشرده خارج کنید و پوشه [<bdi dir="ltr" class="odt-ltr-term">aJson-master</bdi>] [2] را در پوشه [&lt;<bdi dir="ltr" class="odt-ltr-term">arduino</bdi>&gt;/<bdi dir="ltr" class="odt-ltr-term">libraries</bdi>] [3] کپی کنید، جایی که &lt;<bdi dir="ltr" class="odt-ltr-term">arduino</bdi>&gt; پوشه نصب برای<bdi dir="ltr" class="odt-ltr-term">IDE</bdi> آردوینو؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000008B000001181441084E.png" width="97" height="196" style="display:inline-block; margin:4px;width:2.57cm;height:5.189cm;" class="odt-zoomable" data-zoom-src="images/100000000000008B000001181441084E.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000008F000001118289A2C0.png" width="100" height="191" style="display:inline-block; margin:4px;width:2.649cm;height:5.061cm;" class="odt-zoomable" data-zoom-src="images/100000000000008F000001118289A2C0.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000008A000000BF21167331.png" width="97" height="134" style="display:inline-block; margin:4px;width:2.559cm;height:3.54cm;" class="odt-zoomable" data-zoom-src="images/100000000000008A000000BF21167331.png" /></td></tr></table>
+
+<ul>
+  <li>در [4]، نام این پوشه را به [<bdi dir="ltr" class="odt-ltr-term">aJson</bdi>] تغییر دهید؛
+  </li>
+  <li>به [5]، محتویات آن.
+  </li>
+</ul>
+
+<p>اکنون، آردوینوی <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> را راه‌اندازی کنید:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002BE000001D7A9E9D87A.png" width="491" height="330" style="display:inline-block; margin:4px;width:13cm;height:8.721cm;" class="odt-zoomable" data-zoom-src="images/10000000000002BE000001D7A9E9D87A.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>اطمینان حاصل کنید که اکنون مثال‌ها شامل نمونه‌هایی برای کتابخانه <strong><bdi dir="ltr" class="odt-ltr-term">aJson</bdi></strong> هستند. این مثال‌ها را اجرا کرده و مطالعه کنید.</p>
+<p><span id="refheading472731712028290" name="refheading472731712028290" class="odt-bookmark-anchor"></span></p>
+<h2 id="67">6.7. <span style="color: #4f81bd">تبلت اندروید</span></h2>
+<p>مثال‌ها روی سامسونگ گلکسی تب ۲ آزمایش شده‌اند.</p>
+<p>برای آزمایش مثال‌ها روی یک تبلت، ابتدا باید درایور تبلت را روی دستگاه توسعه خود نصب کنید. درایور <bdi dir="ltr" class="odt-ltr-term">Samsung Galaxy Tab</bdi> 2 را می‌توانید در <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://www.samsung.com/fr/support/usefulsoftware/KIES/</bdi>] بیابید:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000290000001A457119558.png" width="435" height="279" style="display:inline-block; margin:4px;width:11.52cm;height:7.375cm;" class="odt-zoomable" data-zoom-src="images/1000000000000290000001A457119558.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p><span id="refheading16265013307711381" name="refheading16265013307711381" class="odt-bookmark-anchor"></span>برای آزمایش مثال‌ها، باید تبلت را به یک شبکه (احتمالاً وای‌فای) متصل کنید و آدرس <bdi dir="ltr" class="odt-ltr-term">IP</bdi> آن را در آن شبکه بدانید. در اینجا نحوه انجام این کار (سامسونگ گلکسی تب ۲) آمده است:</p>
+<ul>
+  <li>تبلت خود را روشن کنید؛
+  </li>
+  <li>در میان برنامه‌های موجود روی تبلت (بالای سمت راست)، به دنبال برنامه‌ای به نام [<bdi dir="ltr" class="odt-ltr-term">paramètres</bdi>] با آیکون چرخ‌دنده بگردید؛
+  </li>
+  <li>در بخش سمت چپ، وای‌فای را روشن کنید؛
+  </li>
+  <li>در بخش سمت راست، یک شبکه وای‌فای را انتخاب کنید؛
+  </li>
+  <li>پس از اتصال به شبکه، به طور خلاصه روی شبکه انتخاب‌شده ضربه بزنید. آدرس تبلت، <bdi dir="ltr" class="odt-ltr-term">IP</bdi>، نمایش داده خواهد شد. آن را یادداشت کنید. به آن نیاز خواهید داشت؛
+  </li>
+</ul>
+
+<p>هنوز در برنامه [<bdi dir="ltr" class="odt-ltr-term">Paramètres</bdi>]، </p>
+<ul>
+  <li>گزینه [<bdi dir="ltr" class="odt-ltr-term">Options de développement</bdi>] را در سمت چپ (در پایین‌ترین قسمت گزینه‌ها) انتخاب کنید؛
+  </li>
+  <li>اطمینان حاصل کنید که گزینه «[<bdi dir="ltr" class="odt-ltr-term">Débogage USB</bdi>]» در سمت راست تیک خورده باشد.
+  </li>
+</ul>
+
+<p>برای بازگشت به منو، روی آیکون وسط نوار وضعیت در پایین صفحه ضربه بزنید – آیکونی که شبیه خانه است. همچنان در نوار وضعیت پایین صفحه،</p>
+<ul>
+  <li>آیکون سمت چپ، دکمه «بازگشت» است: این شما را به صفحه قبلی بازمی‌گرداند؛
+  </li>
+  <li>آیکون سمت راست، آیکون مدیریت وظایف است. شما می‌توانید تمام وظایفی را که در حال حاضر توسط تبلت شما انجام می‌شوند مشاهده و مدیریت کنید؛
+  </li>
+</ul>
+
+<p>تبلت خود را با استفاده از کابل <bdi dir="ltr" class="odt-ltr-term">USB</bdi> که همراه آن ارائه شده است به <bdi dir="ltr" class="odt-ltr-term">PC</bdi> خود متصل کنید.</p>
+<p>دونگل وای‌فای را در یکی از پورت‌های <bdi dir="ltr" class="odt-ltr-term">USB</bdi> روی <bdi dir="ltr" class="odt-ltr-term">PC</bdi> قرار دهید، سپس به همان شبکه وای‌فای که تبلت به آن متصل است، وصل شوید. پس از انجام این کار، در یک پنجره <bdi dir="ltr" class="odt-ltr-term">DOS</bdi>، دستور [<bdi dir="ltr" class="odt-ltr-term">ipconfig</bdi>] را تایپ کنید:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>dos&gt;ipconfig
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Configuration IP de Windows
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>Carte Ethernet Connexion au réseau local :
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>   Suffixe DNS propre à la connexion. . . :
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>   Adresse IPv6 de liaison locale. . . . .: fe80::698b:455a:925:6b13%4
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>   Adresse IPv4. . . . . . . . . . . . . .: 192.168.2.1
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>   Masque de sous-réseau. . . . . . . . . : 255.255.255.0
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>   Passerelle par défaut. . . . . . . . . :
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>Carte réseau sans fil Wi-Fi :
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>   Suffixe DNS propre à la connexion. . . :
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>   Adresse IPv6 de liaison locale. . . . .: fe80::39aa:47f6:7537:f8e1%2
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>   Adresse IPv4. . . . . . . . . . . . . .: 192.168.1.25
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a>   Masque de sous-réseau. . . . . . . . . : 255.255.255.0
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a>Passerelle par défaut. . . . . . . . . : 192.168.1.1
+</code></pre></div></td></tr></table></div>
+<p><bdi dir="ltr" class="odt-ltr-term">PC</bdi> شما دو رابط شبکه دارد و در نتیجه دو آدرس <bdi dir="ltr" class="odt-ltr-term">IP</bdi> دارد:</p>
+<ul>
+  <li>یکی در خط ۹، که مربوط به <bdi dir="ltr" class="odt-ltr-term">PC</bdi> در شبکه سیمی است؛
+  </li>
+  <li>مورد مربوط به خط 17، که آدرس <bdi dir="ltr" class="odt-ltr-term">PC</bdi> در شبکه وای‌فای است؛
+  </li>
+</ul>
+
+<p>این دو مورد اطلاعات را یادداشت کنید. به آن‌ها نیاز خواهید داشت. اکنون در پیکربندی زیر قرار دارید:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000028C000001021B488ACB.png" width="326" height="129" style="display:inline-block; margin:4px;width:8.625cm;height:3.413cm;" class="odt-zoomable" data-zoom-src="images/100000000000028C000001021B488ACB.png" /></td></tr></table>
+
+<p>تبلت باید به <bdi dir="ltr" class="odt-ltr-term">PC</bdi> شما متصل شود. این معمولاً توسط فایروالی محافظت می‌شود که از برقراری ارتباط هر عامل خارجی با <bdi dir="ltr" class="odt-ltr-term">PC</bdi> جلوگیری می‌کند. بنابراین باید فایروال را غیرفعال کنید. این کار را با استفاده از گزینه [<bdi dir="ltr" class="odt-ltr-term">Panneau de configuration</bdi>\<bdi dir="ltr" class="odt-ltr-term">Système et sécurité</bdi>\<bdi dir="ltr" class="odt-ltr-term">Pare-feu Windows</bdi>] انجام دهید. گاهی اوقات ممکن است لازم باشد فایروالی را که توسط نرم‌افزار آنتی‌ویروس شما راه‌اندازی شده نیز غیرفعال کنید. این موضوع به برنامه آنتی‌ویروس شما بستگی دارد.</p>
+<p>اکنون، در <bdi dir="ltr" class="odt-ltr-term">PC</bdi> خود، اتصال شبکه را با تبلت با استفاده از دستور [<bdi dir="ltr" class="odt-ltr-term">ping 192.168.1.y</bdi>] بررسی کنید، که در آن [<bdi dir="ltr" class="odt-ltr-term">192.168.1.y</bdi>] آدرس <bdi dir="ltr" class="odt-ltr-term">IP</bdi> تبلت است. شما باید چیزی شبیه به این را ببینید:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>dos&gt;ping 192.168.1.26
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>Envoi d&#39;une requête &#39;Ping&#39;  192.168.1.26 avec 32 octets de données :
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>Réponse de 192.168.1.26 : octets=32 temps=244 ms TTL=64
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>Réponse de 192.168.1.26 : octets=32 temps=199 ms TTL=64
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>Réponse de 192.168.1.26 : octets=32 temps=28 ms TTL=64
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>Réponse de 192.168.1.26 : octets=32 temps=88 ms TTL=64
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>Statistiques Ping pour 192.168.1.26:
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>Durée approximative des boucles en millisecondes :
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>Minimum = 28ms, Maximum = 244ms, Moyenne = 139ms
+</code></pre></div></td></tr></table></div>
+<p>خطوط ۴–۷ نشان می‌دهند که تبلت با آدرس <bdi dir="ltr" class="odt-ltr-term">IP</bdi> [<bdi dir="ltr" class="odt-ltr-term">192.168.1.y</bdi>] به فرمان [<bdi dir="ltr" class="odt-ltr-term">ping</bdi>] پاسخ داده است.</p>
+<p><span id="refheading104224374082361" name="refheading104224374082361" class="odt-bookmark-anchor"></span></p>
+<h2 id="68-jdk">6.8. <span style="color: #4f81bd">نصب <bdi dir="ltr" class="odt-ltr-term">JDK</bdi></span></h2>
+<p><span id="refheading1633352067866943" name="refheading1633352067866943" class="odt-bookmark-anchor"></span>جدیدترین نسخه، <bdi dir="ltr" class="odt-ltr-term">JDK</bdi>، را می‌توان در <bdi dir="ltr" class="odt-ltr-term">URL</bdi> و [<bdi dir="ltr" class="odt-ltr-term">http://www.oracle.com/technetwork/java/javase/downloads/index.html</bdi>] (ژوئن ۲۰۱۶) یافت. پوشه نصب <bdi dir="ltr" class="odt-ltr-term">JDK</bdi> از این پس با نام &lt;<bdi dir="ltr" class="odt-ltr-term">jdk-install</bdi>&gt; ذکر خواهد شد.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002430000019EB3E42FAD.png" width="405" height="290" style="display:inline-block; margin:4px;width:10.719cm;height:7.669cm;" class="odt-zoomable" data-zoom-src="images/10000000000002430000019EB3E42FAD.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p><span id="refheading454551405398942" name="refheading454551405398942" class="odt-bookmark-anchor"></span></p>
+<h2 id="69-genymotion">6.9. <span style="color: #4f81bd">نصب مدیر شبیه‌ساز <bdi dir="ltr" class="odt-ltr-term">Genymotion</bdi></span></h2>
+<p>شرکت [<bdi dir="ltr" class="odt-ltr-term">Genymotion</bdi>] یک شبیه‌ساز اندروید با کارایی بالا ارائه می‌دهد. این شبیه‌ساز در <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">https://cloud.genymotion.com/page/launchpad/download/</bdi>] (ژوئن ۲۰۱۶) در دسترس است.</p>
+<p>برای دریافت نسخه‌ای جهت استفاده شخصی باید ثبت‌نام کنید. محصول [<bdi dir="ltr" class="odt-ltr-term">Genymotion</bdi>] را با ماشین مجازی <bdi dir="ltr" class="odt-ltr-term">VirtualBox</bdi> دانلود کنید:</p>
+<p><img src="images/10000000000001BF0000013FB3663995.png" width="313" height="223" style="width:8.28cm;height:5.911cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001BF0000013FB3663995.png" /></p>
+<p>از این پس، پوشه نصب [<bdi dir="ltr" class="odt-ltr-term">Genymotion</bdi>] را &lt;<bdi dir="ltr" class="odt-ltr-term">genymotion-install</bdi>&gt; می‌نامیم. فایل [<bdi dir="ltr" class="odt-ltr-term">Genymotion</bdi>] را اجرا کنید. سپس یک ایمیج برای تبلت دانلود کنید:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001B500000104CE528C5B.png" width="306" height="182" style="display:inline-block; margin:4px;width:8.089cm;height:4.821cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B500000104CE528C5B.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در [1]، دستگاه مجازی توصیف‌شده در [2] را اضافه کنید؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003240000011B5A0A8377.png" width="563" height="198" style="display:inline-block; margin:4px;width:14.891cm;height:5.241cm;" class="odt-zoomable" data-zoom-src="images/10000000000003240000011B5A0A8377.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در [3]، ترمینال را پیکربندی کنید؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000017200000260E2C18E87.png" width="259" height="426" style="display:inline-block; margin:4px;width:6.849cm;height:11.261cm;" class="odt-zoomable" data-zoom-src="images/100000000000017200000260E2C18E87.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001700000011402912093.png" width="257" height="193" style="display:inline-block; margin:4px;width:6.81cm;height:5.11cm;" class="odt-zoomable" data-zoom-src="images/10000000000001700000011402912093.png" /></td></tr></table>
+
+<ul>
+  <li>به [4-5]، ترمینال را برای محیط خود سفارشی کنید؛
+  </li>
+  <li>در [6]، ترمینال مجازی را راه‌اندازی کنید؛
+  </li>
+</ul>
+
+<p>اگر همه چیز به درستی پیش برود، پنجره شبیه‌ساز اندروید ظاهر خواهد شد:</p>
+<p><img src="images/10000000000007800000043847A1FBD5.png" width="670" height="377" style="width:17.729cm;height:9.971cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007800000043847A1FBD5.png" /></p>
+<p>گاهی اوقات، شبیه‌ساز اندروید راه‌اندازی نمی‌شود. در یک سیستم ویندوزی، می‌توانید دو نکته زیر را بررسی کنید:</p>
+<ul>
+  <li>بررسی کنید که ماشین مجازی [<bdi dir="ltr" class="odt-ltr-term">Hyper-V</bdi>] نصب نشده باشد. در صورت لزوم، آن را حذف نصب کنید ([1-2]);
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000266000000A6E961AB2A.png" width="369" height="100" style="display:inline-block; margin:4px;width:9.751cm;height:2.641cm;" class="odt-zoomable" data-zoom-src="images/1000000000000266000000A6E961AB2A.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000019D00000150D0B5463A.png" width="248" height="201" style="display:inline-block; margin:4px;width:6.549cm;height:5.33cm;" class="odt-zoomable" data-zoom-src="images/100000000000019D00000150D0B5463A.png" /></td></tr></table>
+
+<ul>
+  <li>سپس، در جادوگر پیکربندی [<bdi dir="ltr" class="odt-ltr-term">Centre Réseau et partage</bdi>] و [1]:
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000232000000D4E7071ADE.png" width="393" height="149" style="display:inline-block; margin:4px;width:10.41cm;height:3.93cm;" class="odt-zoomable" data-zoom-src="images/1000000000000232000000D4E7071ADE.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000024A0000019E95E46960.png" width="351" height="248" style="display:inline-block; margin:4px;width:9.299cm;height:6.57cm;" class="odt-zoomable" data-zoom-src="images/100000000000024A0000019E95E46960.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001550000015D64D8AC7B.png" width="223" height="228" style="display:inline-block; margin:4px;width:5.89cm;height:6.027cm;" class="odt-zoomable" data-zoom-src="images/10000000000001550000015D64D8AC7B.png" /></td></tr></table>
+
+<ul>
+  <li>در [3]، کارت(های) مرتبط با ماشین مجازی <bdi dir="ltr" class="odt-ltr-term">VirtualBox</bdi> را انتخاب کنید؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001890000008CBD16090A.png" width="275" height="98" style="display:inline-block; margin:4px;width:7.28cm;height:2.589cm;" class="odt-zoomable" data-zoom-src="images/10000000000001890000008CBD16090A.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>اطمینان حاصل کنید که در [6]، درایور مربوط به <bdi dir="ltr" class="odt-ltr-term">VirtualBox</bdi> تیک خورده باشد. این مرحله را برای تمام کارت‌های مرتبط با ماشین مجازی <bdi dir="ltr" class="odt-ltr-term">VirtualBox</bdi> تکرار کنید؛
+  </li>
+</ul>
+
+<p><span id="refheading463261712028290" name="refheading463261712028290" class="odt-bookmark-anchor"></span></p>
+<h2 id="610-maven">6.10. <span style="color: #4f81bd">نصب <bdi dir="ltr" class="odt-ltr-term">Maven</bdi></span></h2>
+<p><bdi dir="ltr" class="odt-ltr-term">Maven</bdi> ابزاری برای مدیریت وابستگی‌ها در یک پروژه جاوا و موارد دیگر است. این ابزار در <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://maven.apache.org/download.cgi</bdi>] در دسترس است.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001FD000000CC03B4BFB5.png" width="356" height="143" style="display:inline-block; margin:4px;width:9.419cm;height:3.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FD000000CC03B4BFB5.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>آرشیو را دانلود و از حالت فشرده خارج کنید. ما پوشه نصب <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> را با نام &lt;<bdi dir="ltr" class="odt-ltr-term">maven-install</bdi>&gt; خطاب خواهیم کرد.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001130000009C5AD23345.png" width="192" height="109" style="display:inline-block; margin:4px;width:5.091cm;height:2.889cm;" class="odt-zoomable" data-zoom-src="images/10000000000001130000009C5AD23345.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در [1]، فایل [<bdi dir="ltr" class="odt-ltr-term">conf / settings.xml</bdi>] مِیوِن را پیکربندی می‌کند؛
+  </li>
+</ul>
+
+<p>این فایل شامل خطوط زیر است:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- localRepository</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   | The path to the local repository maven will use to store artifacts.</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   |</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   | Default: ${user.home}/.m2/repository</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--&gt;</span></span>
+</code></pre></div>
+
+<p>مقدار پیش‌فرض در خط ۴ ممکن است برای برخی نرم‌افزارها مشکل‌ساز شود اگر، مانند مورد من، {<bdi dir="ltr" class="odt-ltr-term">user.home</bdi>} شما یک فاصله در مسیرش داشته باشد (برای مثال، [<bdi dir="ltr" class="odt-ltr-term">C:</bdi>\<bdi dir="ltr" class="odt-ltr-term">Users</bdi>\<bdi dir="ltr" class="odt-ltr-term">Serge Tahé</bdi>]). بنابراین باید چیزی شبیه به این بنویسید:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- localRepository</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   | The path to the local repository maven will use to store artifacts.</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   |</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   | Default: ${user.home}/.m2/repository</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">localRepository</span><span style="color:#008080">&gt;</span><span style="color:#ff0000">D:\Programs\devjava\maven\.m2\repository</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">localRepository</span><span style="color:#008080">&gt;</span></span></span>
+</code></pre></div>
+
+<p>و در خط ۷، از استفاده از مسیری که شامل فاصله باشد خودداری کنید.</p>
+<p><span id="refheading2088641855421712" name="refheading2088641855421712" class="odt-bookmark-anchor"></span></p>
+<h2 id="611-ide">6.11. <span style="color: #4f81bd">نصب اندروید استودیو <bdi dir="ltr" class="odt-ltr-term">IDE</bdi></span></h2>
+<p>نسخهٔ <bdi dir="ltr" class="odt-ltr-term">Community Edition</bdi> از <bdi dir="ltr" class="odt-ltr-term">IDE Android Studio</bdi> از <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">https://developer.android.com/studio/index.html</bdi>] (ژوئن ۲۰۱۶) در دسترس است:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001DF000001975C35AD5C.png" width="335" height="285" style="display:inline-block; margin:4px;width:8.871cm;height:7.541cm;" class="odt-zoomable" data-zoom-src="images/10000000000001DF000001975C35AD5C.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p><bdi dir="ltr" class="odt-ltr-term">IDE</bdi> را نصب کرده و سپس آن را راه‌اندازی کنید. طبق رویه در [1-8]، کامپوننت‌های مورد استفاده در مثال‌های بعدی را از <bdi dir="ltr" class="odt-ltr-term">SDK Manager</bdi> نصب کنید. اگر تصمیم بگیرید مؤلفه‌های جدیدتری را نصب کنید، احتمالاً از اندروید استودیو هشدارهایی دریافت خواهید کرد که در آن‌ها ذکر شده است پیکربندی مثال‌ها به مؤلفه‌هایی از <bdi dir="ltr" class="odt-ltr-term">SDK</bdi> ارجاع می‌دهد که در محیط شما وجود ندارند. سپس می‌توانید از پیشنهادهای ارائه‌شده توسط <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> پیروی کنید.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002C60000020165457C1D.png" width="497" height="359" style="display:inline-block; margin:4px;width:13.15cm;height:9.5cm;" class="odt-zoomable" data-zoom-src="images/10000000000002C60000020165457C1D.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002CC0000011F747B0639.png" width="501" height="201" style="display:inline-block; margin:4px;width:13.259cm;height:5.309cm;" class="odt-zoomable" data-zoom-src="images/10000000000002CC0000011F747B0639.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003F40000025CE14B0802.png" width="607" height="362" style="display:inline-block; margin:4px;width:16.06cm;height:9.59cm;" class="odt-zoomable" data-zoom-src="images/10000000000003F40000025CE14B0802.png" /></td></tr></table>
+
+<ul>
+  <li>در [9]، برای مشاهده جزئیات بسته درخواست کنید:
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001A9000001A36EDCB210.png" width="297" height="293" style="display:inline-block; margin:4px;width:7.87cm;height:7.759cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A9000001A36EDCB210.png" /></td></tr></table>
+
+<ul>
+  <li>در [11] بالا، مثال‌ها از <bdi dir="ltr" class="odt-ltr-term">SDK Build-Tools 23.0.3</bdi> استفاده کردند؛
+  </li>
+  <li>در [9-12] زیر، پوشه‌ای را که مدیر شبیه‌ساز [<bdi dir="ltr" class="odt-ltr-term">Genymotion</bdi>] را در آن نصب کرده‌اید، مشخص کنید؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001050000009F11F171D5.png" width="183" height="111" style="display:inline-block; margin:4px;width:4.83cm;height:2.94cm;" class="odt-zoomable" data-zoom-src="images/10000000000001050000009F11F171D5.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002200000012850203354.png" width="381" height="207" style="display:inline-block; margin:4px;width:10.07cm;height:5.48cm;" class="odt-zoomable" data-zoom-src="images/10000000000002200000012850203354.png" /></td></tr></table>
+
+<ul>
+  <li>در [13-18]، نوع پروژه پیش‌فرض را پیکربندی کنید؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000013B00000111F6B46B8A.png" width="220" height="191" style="display:inline-block; margin:4px;width:5.83cm;height:5.05cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B00000111F6B46B8A.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001E000000107F78F9517.png" width="336" height="184" style="display:inline-block; margin:4px;width:8.89cm;height:4.87cm;" class="odt-zoomable" data-zoom-src="images/10000000000001E000000107F78F9517.png" /></td></tr></table>
+
+<ul>
+  <li>در [17]، مقدار پیش‌فرض معمولاً صحیح است؛
+  </li>
+  <li>در [18]، اطمینان حاصل کنید که <bdi dir="ltr" class="odt-ltr-term">JDK</bdi> نسخه ۱.۸ را دارید؛
+  </li>
+</ul>
+
+<p>در زیر، در [19-26]، ما غلط‌گیر املایی را غیرفعال می‌کنیم که به‌طور پیش‌فرض روی انگلیسی تنظیم شده است؛</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000BA00000089507D0BAE.png" width="130" height="96" style="display:inline-block; margin:4px;width:3.44cm;height:2.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BA00000089507D0BAE.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001CB000000AB20F1052A.png" width="321" height="120" style="display:inline-block; margin:4px;width:8.5cm;height:3.17cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CB000000AB20F1052A.png" /></td></tr></table>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000286000001B2EE916F3D.png" width="452" height="304" style="display:inline-block; margin:4px;width:11.959cm;height:8.04cm;" class="odt-zoomable" data-zoom-src="images/1000000000000286000001B2EE916F3D.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در زیر، در [27-28]، نوع میانبرهای صفحه‌کلید مورد نظر خود را انتخاب کنید. می‌توانید تنظیمات پیش‌فرض <bdi dir="ltr" class="odt-ltr-term">IntelliJ</bdi> را حفظ کنید یا آن‌هایی را از یک <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> دیگر که با آن‌ها راحت‌تر هستید، انتخاب کنید؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001DE000001086F08019D.png" width="334" height="185" style="display:inline-block; margin:4px;width:8.849cm;height:4.89cm;" class="odt-zoomable" data-zoom-src="images/10000000000001DE000001086F08019D.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در زیر، در [29-30]، نمایش شماره‌های خط را در کد فعال کنید؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000328000001D464C39428.png" width="565" height="328" style="display:inline-block; margin:4px;width:14.96cm;height:8.67cm;" class="odt-zoomable" data-zoom-src="images/1000000000000328000001D464C39428.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در زیر، در [31-34]، مشخص کنید که هنگام راه‌اندازی <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> چگونه می‌خواهید با اولین پروژه برخورد کنید و سپس با پروژه‌های بعدی؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000023E00000133000D1C1A.png" width="402" height="215" style="display:inline-block; margin:4px;width:10.629cm;height:5.68cm;" class="odt-zoomable" data-zoom-src="images/100000000000023E00000133000D1C1A.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>با اندروید ۲.۱ (مه ۲۰۱۶)، فناوری [<bdi dir="ltr" class="odt-ltr-term">Instant Run</bdi>] گاهی اوقات مشکلاتی ایجاد می‌کند. در این سند، آن را غیرفعال کرده‌ایم:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000AD000000D15DA6F047.png" width="121" height="146" style="display:inline-block; margin:4px;width:3.2cm;height:3.87cm;" class="odt-zoomable" data-zoom-src="images/10000000000000AD000000D15DA6F047.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000027500000159C10481FB.png" width="431" height="237" style="display:inline-block; margin:4px;width:11.416cm;height:6.26cm;" class="odt-zoomable" data-zoom-src="images/100000000000027500000159C10481FB.png" /></td></tr></table>
+
+<ul>
+  <li>در [3-4]، همه چیز غیرفعال شده است؛
+  </li>
+</ul>
+
+<p><span id="refheading90386104415204" name="refheading90386104415204" class="odt-bookmark-anchor"></span></p>
+<h2 id="612">6.12. <span style="color: #4f81bd">استفاده از مثال‌ها</span></h2>
+<p>پروژه‌های اندروید استودیو برای مثال‌ها در <bdi dir="ltr" class="odt-ltr-term">ICI</bdi>| موجود هستند. لطفاً آنها را دانلود کنید.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000CB000000D922536AB3.png" width="143" height="152" style="display:inline-block; margin:4px;width:3.78cm;height:4.02cm;" class="odt-zoomable" data-zoom-src="images/10000000000000CB000000D922536AB3.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>مثال‌ها با استفاده از کامپوننت‌های تعریف‌شده در بالا ساخته شده‌اند:</p>
+<ul>
+  <li><bdi dir="ltr" class="odt-ltr-term">JDK 1.8</bdi>;
+  </li>
+  <li>پلتفرم <bdi dir="ltr" class="odt-ltr-term">Android SDK</bdi> نسخه ۲۳ برای زمان اجرا؛
+  </li>
+</ul>
+
+<p>ابزارهای زیر <bdi dir="ltr" class="odt-ltr-term">SDK:</bdi></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000245000000ECB2E0B2B3.png" width="407" height="165" style="display:inline-block; margin:4px;width:10.76cm;height:4.369cm;" class="odt-zoomable" data-zoom-src="images/1000000000000245000000ECB2E0B2B3.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>اگر محیط شما با محیط توصیف‌شده در بالا مطابقت ندارد، باید پیکربندی پروژه را تغییر دهید. این کار می‌تواند بسیار خسته‌کننده باشد. برای شروع، احتمالاً آسان‌تر است که یک محیط کاری مشابه آنچه در بالا توصیف شده را راه‌اندازی کنید.</p>
+<p><bdi dir="ltr" class="odt-ltr-term">Android Studio</bdi> را راه‌اندازی کنید و سپس پروژه [<bdi dir="ltr" class="odt-ltr-term">exemple-07</bdi>] را باز کنید، برای مثال:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001380000010D153E4CA0.png" width="218" height="188" style="display:inline-block; margin:4px;width:5.78cm;height:4.979cm;" class="odt-zoomable" data-zoom-src="images/10000000000001380000010D153E4CA0.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000012A000000F419EBE79C.png" width="209" height="171" style="display:inline-block; margin:4px;width:5.519cm;height:4.521cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000F419EBE79C.png" /></td></tr></table>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000011D00000119FF833463.png" width="200" height="197" style="display:inline-block; margin:4px;width:5.279cm;height:5.2cm;" class="odt-zoomable" data-zoom-src="images/100000000000011D00000119FF833463.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در [1-3]، پروژه [<bdi dir="ltr" class="odt-ltr-term">Exemple-07</bdi>] را باز کنید؛
+  </li>
+  <li>برای [4]، فایل [<bdi dir="ltr" class="odt-ltr-term">local.properties</bdi>] بررسی شده است؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000024E000000ECC40257B1.png" width="413" height="165" style="display:inline-block; margin:4px;width:10.931cm;height:4.369cm;" class="odt-zoomable" data-zoom-src="images/100000000000024E000000ECC40257B1.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000A6000000CCCC109706.png" width="116" height="143" style="display:inline-block; margin:4px;width:3.069cm;height:3.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A6000000CCCC109706.png" /></td></tr></table>
+
+<ul>
+  <li>در خط ۱۱ بالا، مسیر مدیر <bdi dir="ltr" class="odt-ltr-term">SDK</bdi> اندروید &lt;<bdi dir="ltr" class="odt-ltr-term">sdk-manager-install</bdi>&gt; را برای <bdi dir="ltr" class="odt-ltr-term">SDK</bdi> وارد کنید. شما می‌توانید این مسیر را با دنبال کردن رویهٔ مربوط به [1-4] پیدا کنید:
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002A70000011482D83565.png" width="475" height="193" style="display:inline-block; margin:4px;width:12.569cm;height:5.11cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A70000011482D83565.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>تمام مثال‌های این سند پروژه‌های <bdi dir="ltr" class="odt-ltr-term">Gradle</bdi> هستند که توسط یک فایل [<bdi dir="ltr" class="odt-ltr-term">build.gradle</bdi>] [1-2] پیکربندی شده‌اند:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000014F00000125830029DB.png" width="234" height="205" style="display:inline-block; margin:4px;width:6.2cm;height:5.42cm;" class="odt-zoomable" data-zoom-src="images/100000000000014F00000125830029DB.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>فایل [<bdi dir="ltr" class="odt-ltr-term">build.gradle</bdi>] از مثال 07 به شرح زیر است:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">buildscript {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  repositories {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    mavenCentral()</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    mavenLocal()</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  dependencies {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="font-style:italic;color:#808080">// با نسخهٔ فعلی افزونهٔ اندروید جایگزین کنید</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#808080">    </span>classpath <span style="color:#008000">&#x27;com.android.tools.build:gradle:2.1.0&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008000">// از نسخهٔ 0.11 پلاگین Gradle اندروید، باید از android-apt &gt;= 1.3 استفاده کنید</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#808080">    </span>classpath <span style="color:#008000">&#x27;com.neenbedankt.gradle.plugins:android-apt:1.8&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">  </span>}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">apply <span style="color:#008000">plugin</span>: <span style="color:#008000">&#x27;com.android.application&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">apply <span style="color:#008000">plugin</span>: <span style="color:#008000">&#x27;android-apt&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000043">def </span>AAVersion = <span style="color:#008000">&#x27;4.0.0&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">dependencies {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  apt <span style="color:#008000">&quot;org.androidannotations:androidannotations:</span>$AAVersion<span style="color:#008000">&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">  </span>compile <span style="color:#008000">&quot;org.androidannotations:androidannotations-api:</span>$AAVersion<span style="color:#008000">&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">  </span>compile <span style="color:#008000">&#x27;com.android.support:appcompat-v7:23.4.0&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">  </span>compile <span style="color:#008000">&#x27;com.android.support:design:23.4.0&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">  </span>compile fileTree(<span style="color:#008000">dir</span>: <span style="color:#008000">&#x27;libs&#x27;</span>, <span style="color:#008000">include</span>: [<span style="color:#008000">&#x27;*.jar&#x27;</span>])</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">repositories {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  jcenter()</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">apt {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  arguments {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    androidManifestFile <span style="color:#808000">variant</span>.outputs[<span style="color:#0000ff">0</span>].processResources.manifestFile</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    resourcePackageName android.defaultConfig.applicationId</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">android {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  compileSdkVersion <span style="color:#0000ff">23</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  </span>buildToolsVersion <span style="color:#008000">&quot;23.0.3&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">  </span>defaultConfig {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    applicationId <span style="color:#008000">&quot;android.exemples&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">    </span>minSdkVersion <span style="color:#0000ff">15</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">    </span>targetSdkVersion <span style="color:#0000ff">23</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">    </span>versionCode <span style="color:#0000ff">1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">    </span>versionName <span style="color:#008000">&quot;1.0&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">  </span>}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  buildTypes {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    release {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      minifyEnabled <span style="color:#000043">false</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000043">      </span>proguardFiles getDefaultProguardFile(<span style="color:#008000">&#x27;proguard-android.txt&#x27;</span>), <span style="color:#008000">&#x27;proguard-rules.pro&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">    </span>}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  compileOptions {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    sourceCompatibility JavaVersion.<span style="font-style:italic;color:#660e7a">VERSION_1_7</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#660e7a">    </span>targetCompatibility JavaVersion.<span style="font-style:italic;color:#660e7a">VERSION_1_7</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#660e7a">  </span>}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p>بسته به محیط اندروید (<bdi dir="ltr" class="odt-ltr-term">SDK</bdi> و ابزارها) که راه‌اندازی کرده‌اید، ممکن است لازم باشد نسخه‌ها را در خطوط ۸، ۲۱، ۲۲، ۳۸ و ۳۹ تغییر دهید. اندروید استودیو با ارائه پیشنهادات به شما کمک می‌کند. ساده‌ترین رویکرد این است که این پیشنهادات را دنبال کنید.</p>
+<p>می‌توان به عناصر در فایل [<bdi dir="ltr" class="odt-ltr-term">build.gradle</bdi>] به روش دیگری دسترسی داشت:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000121000000792FB49FF3.png" width="202" height="85" style="display:inline-block; margin:4px;width:5.35cm;height:2.24cm;" class="odt-zoomable" data-zoom-src="images/1000000000000121000000792FB49FF3.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000243000001726A68236F.png" width="405" height="259" style="display:inline-block; margin:4px;width:10.719cm;height:6.849cm;" class="odt-zoomable" data-zoom-src="images/1000000000000243000001726A68236F.png" /></td></tr></table>
+
+<ul>
+  <li>زبانه‌های مختلف در [3]، مقادیر متفاوت را از فایل [<bdi dir="ltr" class="odt-ltr-term">build.gradle</bdi>] منعکس می‌کنند. بنابراین می‌توانید این فایل را به این روش بسازید که به شما امکان می‌دهد از مشکلات نحوی در فایل [<bdi dir="ltr" class="odt-ltr-term">build.gradle</bdi>] اجتناب کنید؛
+  </li>
+</ul>
+
+<p>نکتهٔ دیگری که باید بررسی شود، فایل <bdi dir="ltr" class="odt-ltr-term">JDK</bdi> است که توسط فایل‌های <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> و [5] استفاده می‌شود:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002090000010D9E14BD90.png" width="365" height="188" style="display:inline-block; margin:4px;width:9.65cm;height:4.979cm;" class="odt-zoomable" data-zoom-src="images/10000000000002090000010D9E14BD90.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>در [6]، <bdi dir="ltr" class="odt-ltr-term">JDK</bdi> را بررسی کنید.</p>
+<p>تمام مثال‌ها پروژه‌های <bdi dir="ltr" class="odt-ltr-term">Gradle</bdi> هستند که وابستگی‌هایی دارند که باید دانلود شوند. برای انجام این کار، مراحل زیر را دنبال کنید:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002510000019D67133862.png" width="415" height="289" style="display:inline-block; margin:4px;width:10.98cm;height:7.65cm;" class="odt-zoomable" data-zoom-src="images/10000000000002510000019D67133862.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000013C0000009DC85FE3D4.png" width="221" height="110" style="display:inline-block; margin:4px;width:5.851cm;height:2.91cm;" class="odt-zoomable" data-zoom-src="images/100000000000013C0000009DC85FE3D4.png" /><img src="images/10000000000000D40000008CC0EF1C54.png" width="149" height="98" style="display:inline-block; margin:4px;width:3.93cm;height:2.589cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D40000008CC0EF1C54.png" /></td></tr></table>
+
+<ul>
+  <li>در [5]، پروژه را کامپایل کنید؛
+  </li>
+</ul>
+
+<p>پس از اینکه پروژه بدون خطا شد، باید یک پیکربندی اجرا (<bdi dir="ltr" class="odt-ltr-term">run configuration</bdi>) ایجاد کنید [1-8]:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000B9000000ACF4E99A72.png" width="130" height="121" style="display:inline-block; margin:4px;width:3.431cm;height:3.191cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B9000000ACF4E99A72.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002A2000001AC48716E99.png" width="472" height="300" style="display:inline-block; margin:4px;width:12.48cm;height:7.93cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A2000001AC48716E99.png" /></td></tr></table>
+
+<ul>
+  <li>در [8]، می‌توانید مشخص کنید که همیشه می‌خواهید از همان ترمینال برای اجرا استفاده کنید. به طور کلی، این گزینه برای جلوگیری از نیاز به مشخص کردن ترمینال مورد استفاده در هر بار اجرای پروژه، تیک خورده است. در اینجا، ما آن را بدون تیک باقی می‌گذاریم زیرا قصد داریم به طور خاص دستگاه‌های اندروید مختلف را آزمایش کنیم؛
+  </li>
+  <li>پس از ایجاد پیکربندی اجرای برنامه، مدیر شبیه‌ساز اندروید را راه‌اندازی می‌کنیم [1-3];
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F800000087D77359A5.png" width="173" height="94" style="display:inline-block; margin:4px;width:4.59cm;height:2.499cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F800000087D77359A5.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002200000015677631F39.png" width="381" height="239" style="display:inline-block; margin:4px;width:10.07cm;height:6.331cm;" class="odt-zoomable" data-zoom-src="images/10000000000002200000015677631F39.png" /></td></tr></table>
+
+<ul>
+  <li>اگر شبیه‌ساز اندروید راه‌اندازی نشد، موارد ذکر شده در بخش<a href="#refheading2088641855421712"><u><span style="color: #0563c1"> 6.11</span></u></a> را بررسی کنید؛
+  </li>
+</ul>
+
+<p>برای راه‌اندازی برنامه روی شبیه‌ساز، مراحل زیر را انجام دهید [1-4]:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000DE00000085CD268A40.png" width="155" height="93" style="display:inline-block; margin:4px;width:4.11cm;height:2.461cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE00000085CD268A40.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002720000013DA8E59170.png" width="438" height="222" style="display:inline-block; margin:4px;width:11.591cm;height:5.87cm;" class="odt-zoomable" data-zoom-src="images/10000000000002720000013DA8E59170.png" /></td></tr></table>
+
+<ul>
+  <li>در [2]، باید ایمولیتوری را که قبلاً راه‌اندازی کرده‌اید ببینید؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003870000021404DA97A0.png" width="542" height="319" style="display:inline-block; margin:4px;width:14.33cm;height:8.44cm;" class="odt-zoomable" data-zoom-src="images/10000000000003870000021404DA97A0.png" /></td></tr></table>
+
+<ul>
+  <li>در [5]، نمایی که شبیه‌ساز نمایش می‌دهد؛
+  </li>
+</ul>
+
+<p>اکنون یک تبلت اندروید را به پورت <bdi dir="ltr" class="odt-ltr-term">USB</bdi> روی <bdi dir="ltr" class="odt-ltr-term">PC</bdi> متصل کنید و برنامه را روی آن اجرا کنید:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002720000013D5BE4320E.png" width="438" height="222" style="display:inline-block; margin:4px;width:11.591cm;height:5.87cm;" class="odt-zoomable" data-zoom-src="images/10000000000002720000013D5BE4320E.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در [6]، تبلت اندروید را انتخاب کرده و اپلیکیشن را آزمایش کنید.
+  </li>
+</ul>
+
+<p>در [7]، ترمینال‌های مجازی از پیش تعریف‌شده‌ای داریم. یاد می‌گیریم چگونه آن‌ها را اضافه و حذف کنیم.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000BD000000777964780B.png" width="132" height="83" style="display:inline-block; margin:4px;width:3.5cm;height:2.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BD000000777964780B.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003ED000001A3061C34B0.png" width="603" height="251" style="display:inline-block; margin:4px;width:15.951cm;height:6.65cm;" class="odt-zoomable" data-zoom-src="images/10000000000003ED000001A3061C34B0.png" /></td></tr></table>
+
+<p>در تصویر بالا، ترمینال‌های نمایش‌داده‌شده همگی در حال اجرای <bdi dir="ltr" class="odt-ltr-term">API</bdi> 22 هستند. ما همهٔ آن‌ها را حذف می‌کنیم چون می‌خواهیم با <bdi dir="ltr" class="odt-ltr-term">API</bdi> 23 کار کنیم. برای حذف ترمینال‌ها، رویهٔ [2-3] را دنبال می‌کنیم.</p>
+<p><img src="images/1000000000000378000002CF7B354E3C.png" width="533" height="431" style="width:14.09cm;height:11.411cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000378000002CF7B354E3C.png" /></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002AE00000195848D4D13.png" width="480" height="283" style="display:inline-block; margin:4px;width:12.7cm;height:7.5cm;" class="odt-zoomable" data-zoom-src="images/10000000000002AE00000195848D4D13.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در [4-5]، یک تبلت اضافه می‌کنیم؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000028F000000E4D326DD8F.png" width="458" height="159" style="display:inline-block; margin:4px;width:12.13cm;height:4.219cm;" class="odt-zoomable" data-zoom-src="images/100000000000028F000000E4D326DD8F.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در [6]، یک <bdi dir="ltr" class="odt-ltr-term">API</bdi> را انتخاب کنید. در بالا، ما <bdi dir="ltr" class="odt-ltr-term">API</bdi> 23 را برای یک سیستم ویندوز ۶۴ بیتی انتخاب می‌کنیم؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002B1000002060D050D98.png" width="482" height="362" style="display:inline-block; margin:4px;width:12.76cm;height:9.59cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B1000002060D050D98.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>به [7]، خلاصه پیکربندی؛
+  </li>
+  <li>در [8]، می‌توان پیکربندی پیشرفته‌تری از ترمینال مجازی را انجام داد؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000375000000D2EB2AAEFE.png" width="619" height="147" style="display:inline-block; margin:4px;width:16.39cm;height:3.889cm;" class="odt-zoomable" data-zoom-src="images/1000000000000375000000D2EB2AAEFE.png" /></td></tr></table>
+
+<p>پس از اتمام کار جادوگر، ترمینال ایجاد شده در [9] ظاهر می‌شود.</p>
+<p>پس از انجام این کار، اگر دوباره [<bdi dir="ltr" class="odt-ltr-term">Exemple-07</bdi>] را اجرا کنید، اکنون پنجره زیر را مشاهده خواهید کرد:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002720000013D4D2C805D.png" width="438" height="222" style="display:inline-block; margin:4px;width:11.591cm;height:5.87cm;" class="odt-zoomable" data-zoom-src="images/10000000000002720000013D4D2C805D.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در [1]، ترمینال مجازی جدید ظاهر می‌شود؛
+  </li>
+  <li>در [2]، می‌توانید ترمینال‌های جدید ایجاد کنید؛
+  </li>
+</ul>
+
+<p>گزینه‌های مختلف را امتحان کنید تا مشخص شود کدام ترمینال مجازی برای سیستم شما مناسب‌تر است. در این سند، مثال‌ها عمدتاً با استفاده از شبیه‌ساز <bdi dir="ltr" class="odt-ltr-term">Genymotion</bdi> آزمایش شده‌اند.</p>
+<p>صرف‌نظر از ترمینال مجازی که انتخاب می‌کنید، لاگ‌ها در پنجره‌ای به نام [<bdi dir="ltr" class="odt-ltr-term">Logcat</bdi>] [1-2] نمایش داده می‌شوند:</p>
+<p><img src="images/1000000000000196000001527803F3E2.png" width="284" height="237" style="width:7.519cm;height:6.26cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000196000001527803F3E2.png" /></p>
+<p>این لاگ‌ها را به‌طور منظم بررسی کنید. در اینجا استثناءهایی که باعث کرش برنامه شما شده‌اند گزارش می‌شوند.</p>
+<p>شما همچنین می‌توانید برنامه خود را با استفاده از ابزارهای عیب‌یابی معمول دیباگ کنید:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000E600000075FE31EBB3.png" width="161" height="82" style="display:inline-block; margin:4px;width:4.26cm;height:2.17cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E600000075FE31EBB3.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001B3000000A80F8B7C6D.png" width="304" height="118" style="display:inline-block; margin:4px;width:8.05cm;height:3.11cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B3000000A80F8B7C6D.png" /></td></tr></table>
+
+<ul>
+  <li>در [2]، با یک بار کلیک روی ستون سمت چپ خط مورد نظر، یک نقطه توقف (<bdi dir="ltr" class="odt-ltr-term">breakpoint</bdi>) تنظیم می‌کنید. کلیک مجدد، نقطه توقف را حذف می‌کند؛
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001E4000000F1664D6354.png" width="339" height="169" style="display:inline-block; margin:4px;width:8.961cm;height:4.461cm;" class="odt-zoomable" data-zoom-src="images/10000000000001E4000000F1664D6354.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در [3]، در نقطه توقف، موارد زیر را انجام دهید:
+  </li>
+  <li>[<bdi dir="ltr" class="odt-ltr-term">F6</bdi>]، برای اجرای خط بدون ورود به متدها اگر خط حاوی فراخوانی متد باشد،
+  </li>
+  <li>[<bdi dir="ltr" class="odt-ltr-term">F5</bdi>]، برای اجرای خط با ورود به متدها اگر خط حاوی فراخوانی متد باشد،
+  </li>
+  <li>[<bdi dir="ltr" class="odt-ltr-term">F8</bdi>]، برای ادامه تا نقطه‌ی توقف بعدی؛
+  </li>
+  <li>[<bdi dir="ltr" class="odt-ltr-term">Ctrl-F2</bdi>] برای توقف عیب‌یابی؛
+  </li>
+</ul>
+
+<p><span id="refheading2334521890746156" name="refheading2334521890746156" class="odt-bookmark-anchor"></span></p>
+<h2 id="613-advanced-rest-client">6.13. <span style="color: #4f81bd">نصب افزونه کروم [<bdi dir="ltr" class="odt-ltr-term">Advanced Rest Client</bdi>]</span></h2>
+<p>در این سند، ما از مرورگر <strong>کروم</strong> گوگل (<a href="http://www.google.fr/intl/fr/chrome/browser/"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">http://www.google.fr/intl/fr/chrome/browser/</bdi></span></u></a>) استفاده می‌کنیم. ما افزونه [<bdi dir="ltr" class="odt-ltr-term">Advanced Rest Client</bdi>] را از<span id="advanced-rest-client" name="advanced-rest-client" class="odt-bookmark-anchor"></span> اضافه خواهیم کرد. شما می‌توانید این کار را به شرح زیر انجام دهید:</p>
+<ul>
+  <li>با استفاده از مرورگر کروم به وب‌سایت [<bdi dir="ltr" class="odt-ltr-term">Google Web store</bdi>] (<a href="https://chrome.google.com/webstore"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">https://chrome.google.com/webstore</bdi></span></u></a>) بروید؛
+  </li>
+  <li>برنامه‌ی [<bdi dir="ltr" class="odt-ltr-term">Advanced Rest Client</bdi>] را جستجو کنید:
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001B0000000D21DA44C58.png" width="302" height="147" style="display:inline-block; margin:4px;width:7.999cm;height:3.889cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B0000000D21DA44C58.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>سپس برنامه برای دانلود در دسترس قرار می‌گیرد:
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003BB000000AE1112526C.png" width="661" height="120" style="display:inline-block; margin:4px;width:17.48cm;height:3.184cm;" class="odt-zoomable" data-zoom-src="images/10000000000003BB000000AE1112526C.png" /></td></tr></table>
+
+<ul>
+  <li>برای دانلود آن، باید یک حساب گوگل ایجاد کنید. سپس [<bdi dir="ltr" class="odt-ltr-term">Google Web Store</bdi>] از شما تأیید می‌خواهد [1]:
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001880000010483433BD4.png" width="274" height="182" style="display:inline-block; margin:4px;width:7.26cm;height:4.821cm;" class="odt-zoomable" data-zoom-src="images/10000000000001880000010483433BD4.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000021F000001B6AC8B88FF.png" width="334" height="269" style="display:inline-block; margin:4px;width:8.839cm;height:7.128cm;" class="odt-zoomable" data-zoom-src="images/100000000000021F000001B6AC8B88FF.png" /></td></tr></table>
+
+<ul>
+  <li>در [2]، افزونهٔ افزوده‌شده تحت گزینهٔ [<bdi dir="ltr" class="odt-ltr-term">Applications</bdi>] [3] در دسترس است. این گزینه در هر زبانهٔ جدیدی که ایجاد می‌کنید (<bdi dir="ltr" class="odt-ltr-term">CTRL-T</bdi>) در مرورگر نمایش داده می‌شود.
+  </li>
+</ul>
+
+<p><span id="refheading191922103626402" name="refheading191922103626402" class="odt-bookmark-anchor"></span>
+<span id="json" name="json" class="odt-bookmark-anchor"></span></p>
+<h2 id="614-json">6.14. <span style="color: #4f81bd"><strong>مدیریت <bdi dir="ltr" class="odt-ltr-term">jSON</bdi> «</strong> <strong>» در جاوا</strong></span></h2>
+<p>به طور شفاف برای توسعه‌دهنده، چارچوب [<bdi dir="ltr" class="odt-ltr-term">Spring MVC</bdi>] از کتابخانه <bdi dir="ltr" class="odt-ltr-term">jSON</bdi> [<bdi dir="ltr" class="odt-ltr-term">Jackson</bdi>] استفاده می‌کند. برای نشان دادن اینکه <bdi dir="ltr" class="odt-ltr-term">jSON</bdi> (<bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> نشانهٔ شیء)، در اینجا برنامه‌ای را ارائه می‌دهیم که اشیاء را به <bdi dir="ltr" class="odt-ltr-term">jSON</bdi> سریالیزه می‌کند و با انجام عملیات معکوس، رشته‌های حاصل <bdi dir="ltr" class="odt-ltr-term">jSON</bdi> را به اشیا اصلی بازسازی می‌کند.</p>
+<p>کتابخانه «<bdi dir="ltr" class="odt-ltr-term">Jackson</bdi>» به شما امکان می‌دهد تا بسازید:</p>
+<ul>
+  <li>رشته <bdi dir="ltr" class="odt-ltr-term">jSON</bdi> برای یک شیء: <i><bdi dir="ltr" class="odt-ltr-term">new ObjectMapper</bdi>().<bdi dir="ltr" class="odt-ltr-term">writeValueAsString</bdi>(<bdi dir="ltr" class="odt-ltr-term">object</bdi>)</i>;
+  </li>
+  <li>یک شیء از یک رشته <bdi dir="ltr" class="odt-ltr-term">jSON:</bdi> <i><bdi dir="ltr" class="odt-ltr-term">new ObjectMapper</bdi>().<bdi dir="ltr" class="odt-ltr-term">readValue</bdi>(<bdi dir="ltr" class="odt-ltr-term">jsonString, Object.class</bdi>)</i>.
+  </li>
+</ul>
+
+<p>هر دو روش ممکن است یک <em><bdi dir="ltr" class="odt-ltr-term">IOException</bdi></em> را فعال کنند. در اینجا یک مثال آمده است.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000D5000000EFB3DEB6F9.png" width="149" height="167" style="display:inline-block; margin:4px;width:3.941cm;height:4.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D5000000EFB3DEB6F9.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<p>پروژهٔ بالا یک پروژهٔ <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> است که شامل فایل [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] زیر است:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">project</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">         <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span><span style="color:#000000">4.0.0</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">istia.st.pam</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">json</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">1.0-SNAPSHOT</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">com.fasterxml.jackson.core</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">jackson-databind</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">2.3.3</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">project</span><span style="color:#008080">&gt;</span></span></span>
+</code></pre></div>
+
+<ul>
+  <li>خطوط ۱۲–۱۶: وابستگی که کتابخانه «<bdi dir="ltr" class="odt-ltr-term">Jackson</bdi>» را وارد می‌کند؛
+  </li>
+</ul>
+
+<p>کلاس [<bdi dir="ltr" class="odt-ltr-term">Personne</bdi>] به شرح زیر است:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.json;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Personne {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// داده‌ها</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String nom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String prenom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> age;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// سازنده‌ها</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Personne() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Personne(String nom, String prénom, </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> âge) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.nom = nom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.prenom = prénom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.age = âge;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// امضا</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String toString() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> String.format(</span><span style="color:#2a00ff">&quot;Personne[%s, %s, %d]&quot;</span><span style="color:#000000">, nom, prenom, age);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// گیرنده و تنظیم‌کننده</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p>کلاس [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>] به شرح زیر است:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.json;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.fasterxml.jackson.databind.ObjectMapper;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.IOException;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.HashMap;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.Map;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Main {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">//ابزار سریالی‌سازی/دسریالی‌سازی</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> ObjectMapper mapper = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> ObjectMapper();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> main(String[] args) </span><span style="font-weight:bold;color:#7f0055">throws</span><span style="color:#000000"> IOException {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">//ایجاد یک شخص</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Personne paul = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne(</span><span style="color:#2a00ff">&quot;Denis&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;Paul&quot;</span><span style="color:#000000">, 40);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">//نمایش JSON</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    String json = mapper.writeValueAsString(paul);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json=&quot;</span><span style="color:#000000"> + json);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// نمونه سازی یک Person از JSON</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Personne p = mapper.readValue(json, Personne.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// نمایش یک شخص</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Personne=&quot;</span><span style="color:#000000"> + p);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// یک آرایه</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Personne virginie = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne(</span><span style="color:#2a00ff">&quot;Radot&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;Virginie&quot;</span><span style="color:#000000">, 20);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Personne[] personnes = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> Personne[]{paul, virginie};</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">//نمایش JSON</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    json = mapper.writeValueAsString(personnes);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json personnes=&quot;</span><span style="color:#000000"> + json);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// فرهنگ</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    Map&lt;String, Personne&gt; hpersonnes = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> HashMap&lt;String, Personne&gt;();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    hpersonnes.put(</span><span style="color:#2a00ff">&quot;1&quot;</span><span style="color:#000000">, paul);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    hpersonnes.put(</span><span style="color:#2a00ff">&quot;2&quot;</span><span style="color:#000000">, virginie);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// نمایش JSON</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    json = mapper.writeValueAsString(hpersonnes);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;Json hpersonnes=&quot;</span><span style="color:#000000"> + json);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p>اجرای این کلاس خروجی صفحه زیر را تولید می‌کند:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Json={&quot;nom&quot;:&quot;Denis&quot;,&quot;prenom&quot;:&quot;Paul&quot;,&quot;age&quot;:40}
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Personne=Personne[Denis, Paul, 40]
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Json personnes=[{&quot;nom&quot;:&quot;Denis&quot;,&quot;prenom&quot;:&quot;Paul&quot;,&quot;age&quot;:40},{&quot;nom&quot;:&quot;Radot&quot;,&quot;prenom&quot;:&quot;Virginie&quot;,&quot;age&quot;:20}]
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>Json hpersonnes={&quot;2&quot;:{&quot;nom&quot;:&quot;Radot&quot;,&quot;prenom&quot;:&quot;Virginie&quot;,&quot;age&quot;:20},&quot;1&quot;:{&quot;nom&quot;:&quot;Denis&quot;,&quot;prenom&quot;:&quot;Paul&quot;,&quot;age&quot;:40}}
+</code></pre></div></td></tr></table></div>
+<p>نکات کلیدی قابل توجه از مثال:</p>
+<ul>
+  <li>شیء [<bdi dir="ltr" class="odt-ltr-term">ObjectMapper</bdi>] مورد نیاز برای تبدیلات <bdi dir="ltr" class="odt-ltr-term">jSON</bdi> / شیء: خط 11;
+  </li>
+  <li>تبدیل [<bdi dir="ltr" class="odt-ltr-term">Personne</bdi>] → <bdi dir="ltr" class="odt-ltr-term">jSON:</bdi> خط 17;
+  </li>
+  <li>تبدیل <bdi dir="ltr" class="odt-ltr-term">jSON</bdi> → [<bdi dir="ltr" class="odt-ltr-term">Personne</bdi>]: خط ۲۰؛
+  </li>
+  <li>استثناء [<bdi dir="ltr" class="odt-ltr-term">IOException</bdi>] که توسط هر دو متد پرتاب شده است: خط 13.
+  </li>
+</ul>
+
+<p><span id="refheading1315181394789306" name="refheading1315181394789306" class="odt-bookmark-anchor"></span>
+<span id="wampserver" name="wampserver" class="odt-bookmark-anchor"></span></p>
+<h2 id="615-wampserver">6.15. <span style="color: #4f81bd"><strong>نصب [<bdi dir="ltr" class="odt-ltr-term">WampServer</bdi>]</strong></span></h2>
+<p>[<bdi dir="ltr" class="odt-ltr-term">WampServer</bdi>] یک بسته نرم‌افزاری برای توسعه در <bdi dir="ltr" class="odt-ltr-term">PHP / MySQL / Apache</bdi> روی یک ماشین ویندوز است. ما از آن صرفاً برای <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> و <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> استفاده خواهیم کرد.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001B800000143AA2F6C9E.png" width="264" height="194" style="display:inline-block; margin:4px;width:6.99cm;height:5.129cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B800000143AA2F6C9E.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001DE0000012785F93F1B.png" width="334" height="206" style="display:inline-block; margin:4px;width:8.849cm;height:5.459cm;" class="odt-zoomable" data-zoom-src="images/10000000000001DE0000012785F93F1B.png" /></td></tr></table>
+
+<ul>
+  <li>در وب‌سایت [<bdi dir="ltr" class="odt-ltr-term">WampServer</bdi>] [1]، نسخه مناسب [2] را انتخاب کنید؛
+  </li>
+  <li>فایل اجرایی دانلود شده یک نصاب (<bdi dir="ltr" class="odt-ltr-term">Installer</bdi>) است. جزئیات مختلفی در طول نصب درخواست می‌شود. این موارد به <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> مربوط نمی‌شوند. بنابراین می‌توان آنها را نادیده گرفت. پنجره [3] در پایان نصب ظاهر می‌شود. [<bdi dir="ltr" class="odt-ltr-term">WampServer</bdi>] را اجرا کنید،
+  </li>
+</ul>
+
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000A100000087786C9D26.png" width="113" height="94" style="display:inline-block; margin:4px;width:2.979cm;height:2.499cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A100000087786C9D26.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000D700000130F483B199.png" width="150" height="213" style="display:inline-block; margin:4px;width:3.979cm;height:5.63cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D700000130F483B199.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>در [4]، آیکون [<bdi dir="ltr" class="odt-ltr-term">WampServer</bdi>] در نوار وظیفه در پایین سمت راست صفحه [4] نصب می‌شود،
+  </li>
+  <li>و هنگامی که روی آن کلیک می‌کنید، منوی [5] ظاهر می‌شود. این امکان را به شما می‌دهد تا سرور آپاچی و <bdi dir="ltr" class="odt-ltr-term">SGBD MySQL</bdi> را مدیریت کنید. برای مدیریت این کار، از گزینه [<bdi dir="ltr" class="odt-ltr-term">PhpPmyAdmin</bdi>] استفاده کنید؛
+  </li>
+  <li>که پنجرهٔ نمایش داده شده در زیر را باز می‌کند،
+  </li>
+</ul>
+
+<p><img src="images/10000000000003C600000186DE03B7E4.png" width="580" height="234" style="width:15.341cm;height:6.189cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003C600000186DE03B7E4.png" /></p>
+<p>ما جزئیات کمی در مورد استفاده از [<bdi dir="ltr" class="odt-ltr-term">PhpMyAdmin</bdi>] ارائه خواهیم داد. نحوه استفاده از آن را در سند توضیح می‌دهیم.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        این آموزش, نوشتهٔ سرژ تاهه, تحت شرایط
+        Creative Commons Attribution – Non-Commercial –
+        ShareAlike 3.0 Unported.
+
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
